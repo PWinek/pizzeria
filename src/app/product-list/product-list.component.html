@@ -1,0 +1,17 @@
+<h2>Produkty</h2>
+
+<div *ngFor="let product of products; index as productId">
+    <h3>
+        <a [routerLink]="['/products', productId]">
+        {{product.name}}
+        </a>
+    </h3>
+
+    <p *ngIf="product.price">
+        Typ: {{ product.type }}
+    </p>
+
+    <button (click)="share()">
+        Share
+    </button>
+</div>
